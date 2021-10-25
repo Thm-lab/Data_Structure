@@ -39,6 +39,10 @@ int main() {
   for (int i = 0; i < sizeof(a) / sizeof(a[0]); i++) {
     cout << a[i] << " ";
   }
+  cout << "\n";
+  for (int i = 0; i < sizeof(b) / sizeof(b[0]); i++) {
+    cout << b[i] << " ";
+  }
   return 0;
 }
 
