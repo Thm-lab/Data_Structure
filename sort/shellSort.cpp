@@ -57,6 +57,8 @@ void shellSort(int a[], int left, int right, int MODE) {
   }
 }
 
+// 获得递减的增量序列
+// Shell序列和Hibbard序列
 void getGap(int gap[], int len, int MODE) {
   switch (MODE) {
     case Shell: {
@@ -68,6 +70,7 @@ void getGap(int gap[], int len, int MODE) {
       gap[k] = 0;
       break;
     }
+    // 先求Hibbar正序序列然后倒序放进gap里面
     case Hibbard: {
       int h[len] = {0};
       int k = 0;
@@ -88,6 +91,7 @@ void getGap(int gap[], int len, int MODE) {
   }
 }
 
+// 用gap序列来插入排序
 void insertSort(int a[], int left, int right, int gap) {
   int i = left + gap;
   for (; i <= right; i++) {

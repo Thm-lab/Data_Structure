@@ -30,6 +30,7 @@ int main() {
 }
 
 void bubbleSort(int a[], int left, int right) {
+  // 双重循环是冒泡的精神 每次把最大的元素放到低端
   for (int i = left; i < right; i++) {
     for (int j = 0; j < (right - left + 1) - i - 1; j++) {
       if (a[j] > a[j + 1]) {

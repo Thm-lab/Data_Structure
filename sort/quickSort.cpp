@@ -30,12 +30,15 @@ int main() {
 }
 
 void quickSort(int a[], int left, int right) {
+  // 错误判断
   if (left >= right) {
     return;
   }
+  // 用最左边元素当基准
   int pivot = a[left];
   int i = left, j = right;
   while (i != j) {
+    // 左基准的情况下 一定是右标兵先移动
     while (a[j] >= pivot && i < j) {
       j--;
     }
@@ -44,7 +47,9 @@ void quickSort(int a[], int left, int right) {
     }
     swap(a[i], a[j]);
   }
+  // 把pivot放到左边比它小 右比它大的地方
   swap(a[left], a[i]);
+  // 对左右段分别递归
   quickSort(a, left, i - 1);
   quickSort(a, i + 1, right);
 }

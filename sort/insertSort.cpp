@@ -34,6 +34,7 @@ void insertSort(int a[], int left, int right) {
   for (; i <= right; i++) {
     int insert = a[i];
     int j = i - 1;
+    // 用while把a[i-1]的元素往后移动 直到一个比a[i]小的 然后把insert放到这个元素后面
     while (a[j] > insert && (j >= left)) {
       a[j + 1] = a[j];
       j--;
