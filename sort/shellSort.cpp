@@ -10,7 +10,7 @@
  * Hibbard: gap = 2^k - 1
  *
  */
-#include <math.h>
+#include <algorithm>
 #include <array>
 #include <cmath>
 #include <iostream>
